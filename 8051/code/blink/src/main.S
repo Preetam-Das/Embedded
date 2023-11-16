@@ -14,7 +14,7 @@ main:
 delay:
     mov R0, #0FFH       ; Load Register 0 with 255
     loop:
-        MOV R1, #0FFH   ; Load Register 0 with 255
+        MOV R1, #0FFH   ; Load Register 1 with 255
         DJNZ R1, $      ; Decrement R1 and jump here($) if not zero
         DJNZ R0, loop   ; Decrement R0 and jump to loop label if not zero
     RET                 ; Return from subroutine
