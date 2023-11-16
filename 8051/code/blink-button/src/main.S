@@ -15,9 +15,8 @@ btn_press:
     CLR LED             ; Turn on LED
     acall delay         ; call delay subroutine
     SETB LED            ; Turn off LED
-    acall delay         ; call delay subroutine
-    JB BTN, main        ; jump back to main if button released
-    SJMP btn_press      ; else rerun btn_press
+    ACALL delay         ; call delay subroutine
+    SJMP main           ; jump back to main
 
 delay:
     mov R0, #0FFH       ; Load Register 0 with 255

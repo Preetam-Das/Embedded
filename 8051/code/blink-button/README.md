@@ -1,7 +1,7 @@
-## Blink
+## Blink (Polled Button)
 
-Simple assembly program to blink an LED using polled delay loop. To build do `make`.
-To upload do `make upload`.
+Program to blink LED when button is pressed. Button press is checked using
+polled logic.
 
 ## Working
 In the code we turn on and off the led using the CPL instruction which
