@@ -1,4 +1,4 @@
-## Code
+# Code
 
 A bunch of assembly language programs for interfacing the 8051 mcu with various
 components and understanding its basic peripherals.
