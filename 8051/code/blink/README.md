@@ -24,3 +24,8 @@ of the mcu. Here is an overview:
 connected with external pullups so I am not worrying about them.
 
 [^1]: Check the datasheet for different conditions for different voltage levels
+
+## Instructions used
+
+- `CPL` : Complement(0 to 1 and 1 to 0) direct bit
+- `DJNZ bit,label` : Decrement bit and jump to label if it is not zero

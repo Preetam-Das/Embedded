@@ -17,7 +17,6 @@ PRG=usbasp
 MACH=89s52
 UPLDFLAGS=-F -V -c $(PRG) -p $(MACH) -v
 
-
 $(TARGET): $(SRCFILES)
 	@echo Cretaing directory $(BUILDIR)
 	mkdir -p $(BUILDIR)
@@ -32,4 +31,4 @@ sim: $(TARGET)
 clean:
 	rm -rf $(BUILDIR)
 
-.PHONY: clean upload
+.PHONY: clean upload sim
