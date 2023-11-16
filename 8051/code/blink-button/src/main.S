@@ -13,7 +13,7 @@ main:
 
 btn_press:
     CLR LED             ; Turn on LED
-    acall delay         ; call delay subroutine
+    ACALL delay         ; call delay subroutine
     SETB LED            ; Turn off LED
     ACALL delay         ; call delay subroutine
     SJMP main           ; jump back to main
