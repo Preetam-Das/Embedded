@@ -2,7 +2,7 @@
 
 I decided to start with 8051/52 because i think it is what mostly taught as the
 first micro controller here in India(at least that is what i think i might be
-wrong i am not an electrical engineering student). Also 8051/52 seems to have a
+wrong i am not an EE/ECE student). Also 8051/52 seems to have a
 very simple set of peripherals which are simple to get started with.
 
 ## Hardware
