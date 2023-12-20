@@ -1,6 +1,6 @@
 $INCLUDE (../regdef.S)  ; Include Register definitions
 
-LED EQU P0.1            ; Define LED Pin
+LED EQU P1.0            ; Define LED Pin
 
 ORG 000H                ; Put code to 00H - default behaviour
 SJMP main               ; Jump to main label

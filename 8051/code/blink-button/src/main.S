@@ -1,6 +1,6 @@
 $INCLUDE (../regdef.S)  ; Include Register definitions
 
-LED EQU P2.0            ; Define Led Pin
+LED EQU P1.0            ; Define Led Pin
 BTN EQU P3.3            ; Define Button Pin
 
 ORG 000H                ; Put code to 00H - default behaviour

@@ -1,3 +1,4 @@
 *.lst
 *.hex
 build/
+test/
