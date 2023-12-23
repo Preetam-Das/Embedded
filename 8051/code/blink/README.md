@@ -11,12 +11,7 @@ We use inverse logic, .i.e, writing logic-0 to the LED Pin turns it on and
 writing logic-1 to turns it off.
 
 Forward logic does not work because of the DC characteristics of the Port Pins
-of the mcu. Here is an overview:
-
-| Parameter | Min voltage               | Max Voltage |
-|-----------|---------------------------|-------------|
-|logic 0    |                           |0.45v        |
-|logic 1    | 2.4v/0.75\*Vcc/0.9\*Vcc[^1] |             |
+of the mcu. Check notes for dc-characteristics.
 
 **NOTE**: The anode of the LED should be connected to 5v.
 
