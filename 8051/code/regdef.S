@@ -20,6 +20,10 @@ TH2  DATA 0CDH ;
 IE DATA 0A8H ; interrupt enable - bit addressable
 IP DATA 0B8H ; interrupt priority - bit addressable
 
+; Serial Port SFRs
+SCON DATA 098H
+SBUF DATA 099H
+
 ; Other Special Function Registers
 ACC  DATA 0E0H ; accumulator
 
@@ -48,6 +52,15 @@ TR0 BIT 08CH    ; timer 0 run control s/w controlled
 TF0 BIT 08DH    ; timer 0 overflow bit h/w controlled
 TR1 BIT 08EH    ; timer 1 run control s/w controlled
 TF1 BIT 08FH    ; timer 1 overflow bit h/w controlled
+;; SCON Register
+RI BIT 098H     ; Receive interrupt flag h/w controlled
+TI BIT 099H     ; Transmit interrupt flag h/w controlled
+RB8 BIT 09AH    ; 9th recieved bit
+TB8 BIT 09BH    ; 9th trasmitted bit
+REN BIT 09CH    ; reception bit s/w controlled
+SM2 BIT 09DH    ; multiprocessor communication bit
+SM1 BIT 09EH    ; serial mode bit 1
+SM0 BIT 09FH    ; serial mode bit 0
 ;; Other
 INT0 BIT 0B2H
 INT1 BIT 0B3H
