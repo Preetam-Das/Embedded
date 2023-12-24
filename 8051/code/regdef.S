@@ -21,11 +21,12 @@ IE DATA 0A8H ; interrupt enable - bit addressable
 IP DATA 0B8H ; interrupt priority - bit addressable
 
 ; Serial Port SFRs
-SCON DATA 098H
-SBUF DATA 099H
+SCON DATA 098H ; Serial port control
+SBUF DATA 099H ; Serial buffer
 
 ; Other Special Function Registers
 ACC  DATA 0E0H ; accumulator
+PCON  DATA 087H ; power control
 
 ; Bit Addressables
 ;; IE Register
