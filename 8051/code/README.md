@@ -14,5 +14,8 @@ It contains the various SFR memory locations and also the ISR addresses.
 - **uart-polled-output** : Transmit 'Hello' over UART
 - **uart-polled-echo** : Echo back what was recieved over UART
 - **uart-interrupt-echo** : Same as above but using serial port interrupts
+- **uart-timer-output** : Periodically transmit data over serial using timers
+- **uart-hardware-interrupt** : Display no. of button click over serial using
+hardware interrupt
 
 more coming soon ...
