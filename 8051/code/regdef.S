@@ -27,6 +27,7 @@ SBUF DATA 099H ; Serial buffer
 ; Other Special Function Registers
 ACC  DATA 0E0H ; accumulator
 PCON  DATA 087H ; power control
+B DATA 0F0H ; B register
 
 ; Bit Addressables
 ;; IE Register
