@@ -1,7 +1,7 @@
 $INCLUDE (../regdef.S)  ; Include Register definitions
 
 CNT EQU R0             ; Counting register
-VAL EQU 0              ; Initial value
+ZERO EQU 0              ; Initial value
 
 ORG EXTI0
 JMP handle_button
@@ -22,7 +22,7 @@ init:
     MOV TMOD, #020H         ; Timer 1 auto-reload
     MOV TH1, #0FDH          ; Auto-reload value (253) for 9600 bps
     MOV TL1, #0FDH          ; Auto-reload value (253) for 9600 bps
-    MOV CNT, #VAL           ; Load Counter
+    MOV CNT, #ZERO          ; Load Counter
 
     MOV IE, #081H           ; global + external 0 enable
     MOV TCON, #041H         ; external 0 falling edge-trigger + start timer 0
@@ -48,12 +48,17 @@ handle_tx:
     RET                     ; return
 
 handle_button:
-    CLR ET0                 ; disable interrupt
-    INC CNT                 ; increment counter
-    MOV DPTR, #msg_prompt   ; Reload dptr
-    CALL send_counter       ; send counter to serial
-    SETB ET0                ; restart interrupt
-    RETI                    ; reenable interrupt
+    CLR ET0                     ; disable interrupt
+    CJNE CNT, #255, continue    ; continue if not overflowing
+    MOV DPTR, #init_pormpt      ; load dptr
+    ACALL transmit_prompt       ; send init prompt
+    MOV CNT, #ZERO              ; reload with zero
+continue:
+    INC CNT                     ; increment counter
+    MOV DPTR, #msg_prompt       ; Reload dptr
+    CALL send_counter           ; send counter to serial
+    SETB ET0                    ; restart interrupt
+    RETI                        ; reenable interrupt
 
 send_counter:
     MOV A, #0                   ; -
