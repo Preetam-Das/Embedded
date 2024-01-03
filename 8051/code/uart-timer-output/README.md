@@ -1,4 +1,4 @@
-## UART - interrupt echo
+## UART - timer interrupt
 
 This program writes a string "Hello cruel world!!" to the serial port through
 UART, in regular intervals. The interval is timed by using a timer-0 interrupt.

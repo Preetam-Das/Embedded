@@ -1,4 +1,4 @@
-## UART - interrupt echo
+## UART - hardware interrupt
 
 This program counts the number of button clicks using hardware interrupts and
 prints the number in serial console through UART. Number of clicks gets reset at

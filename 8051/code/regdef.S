@@ -28,6 +28,12 @@ SBUF DATA 099H ; Serial buffer
 ACC  DATA 0E0H ; accumulator
 PCON  DATA 087H ; power control
 B DATA 0F0H ; B register
+DPL    DATA    082H
+DPH    DATA    083H
+DP0L    DATA    082H
+DP0H    DATA    083H
+DP1L    DATA    084H
+DP1H    DATA    085H
 
 ; Bit Addressables
 ;; IE Register
@@ -66,6 +72,7 @@ SM0 BIT 09FH    ; serial mode bit 0
 ;; Other
 INT0 BIT 0B2H
 INT1 BIT 0B3H
+
 
 ; Interrupt Vector Table
 RESET  CODE  000H
